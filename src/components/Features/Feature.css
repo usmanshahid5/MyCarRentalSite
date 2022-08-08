@@ -1,0 +1,106 @@
+.FeauturesHeader1{
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  z-index: 1;
+  margin: auto;
+  z-index: -1;
+}
+.featureImg1{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+}
+.FeauturesHeaderCenter{
+  position: absolute;
+  height: 70vh;
+  width: 100%;
+  background-color: black;
+  opacity: .7;
+  top: 0;
+}
+.HeaderText1{
+  opacity:1;
+  color:white;
+  width:65%;
+  margin-left: 20%;
+  margin-top: 12%;
+  /*position: absolute;*/
+
+}
+.des{
+  opacity:.7;
+  color:white;
+  width:60%;
+  font-weight: 400;
+  margin-left: 20%;
+
+}
+.feautureCard{
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+.feautureCardLeft{
+  flex: 60%;
+  height: 60vh;
+}
+.feautureCardRight{
+  flex: 40%;
+  height: 60vh;
+}
+.feautureCardLeftImg{
+  width: 80%;
+  height: 50vh;
+  margin: auto;
+  margin-left: 10%;
+  margin-top: 10%;
+  border-radius: 30px;
+}
+.feautureCardRight1{
+  text-align: center;
+  margin-left: -10%;
+}
+
+.feautureCardRight{
+  text-align: center;
+}
+.feautureCardRight1{
+  width: 60%;
+  height: 50vh;
+  margin: auto;
+  margin-left: 10%;
+
+  /*margin-top: -20%;*/
+}
+.feautureCardLeftImg1{
+  width: 100%;
+  height: 40vh;
+  margin: auto;
+  margin-top: 20%;
+  margin-left: -10%;
+  border-radius: 30px;
+}
+.feautureCard1{
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+
+.slider-container1 {
+  width: 60%;
+  margin: auto;
+  height: 50%;
+}
+.slider-container2{
+  width: 60%;
+  margin: auto;
+  height: 50%;
+}

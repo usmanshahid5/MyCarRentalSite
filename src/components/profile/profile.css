@@ -1,0 +1,39 @@
+.circle{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background-color: #282d32;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  border: 2px solid white;
+  margin-top: 5%;
+}
+.middle{
+  flex: 40%;
+}
+
+.rightmost{
+  flex: 60%;
+}
+.profiles{
+  font-size: 20px;
+}
+.topLift{
+  margin-top: 2%;
+}
+.profileback{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color:white;
+  margin:auto;
+  padding:50px;
+  border-radius:20px;
+  padding-bottom:70px;
+  padding-top:20px;
+  width: 40%;
+}
+@media (max-width: 800px) {
+ .profileback{
+   width: 100%;
+ }
+}

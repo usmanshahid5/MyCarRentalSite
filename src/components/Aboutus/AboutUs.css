@@ -1,0 +1,98 @@
+.FeauturesHeader{
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background-image: url("../Images/cardImages/7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  margin: auto;
+  text-align: center;
+}
+.FeauturesHeaderCenter{
+  position: absolute;
+  height: 70vh;
+  width: 100%;
+  background-color: black;
+  opacity: .7;
+  top: 0;
+}
+.HeaderText{
+opacity:1;
+  color:white;
+  border:1px solid red;
+  text-align: center;
+
+}
+.feautureCard{
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+.feautureCardLeft{
+  flex: 60%;
+  height: 60vh;
+}
+.feautureCardRight{
+  flex: 40%;
+  height: 60vh;
+}
+.feautureCardLeftImg{
+  width: 80%;
+  height: 50vh;
+  margin: auto;
+  margin-left: 10%;
+  margin-top: 10%;
+  border-radius: 30px;
+}
+.feautureCardRight1{
+  text-align: center;
+  margin-left: -10%;
+}
+
+.feautureCardRight{
+  text-align: center;
+}
+.feautureCardRight1{
+  width: 60%;
+  height: 50vh;
+  margin: auto;
+  margin-left: 10%;
+
+  /*margin-top: -20%;*/
+}
+.feautureCardLeftImg1{
+  width: 100%;
+  height: 40vh;
+  margin: auto;
+  margin-top: 20%;
+  margin-left: -10%;
+  border-radius: 30px;
+}
+.feautureCard1{
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  .feautureCardLeft {
+    display:none;
+  }
+  .feautureCardRight{
+    flex: 100%;
+    width: 100%;
+    margin-left: 20%;
+  }
+  .feautureCardRight1{
+    display: none;
+  }
+  .feautureCardLeft1{
+    margin-top: -10%;
+    margin-left: 20%;
+  }
+}
