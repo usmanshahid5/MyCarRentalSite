@@ -15,7 +15,7 @@ const Main = () => {
   return (
 
         <Routes>
-      <Route exact path="/MyCarRentalSite" element={ <Header/> }/>
+      <Route exact path="/" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>
