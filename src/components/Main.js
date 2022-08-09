@@ -17,7 +17,7 @@ const Main = () => {
       <Switch>
       <Route exact path="/" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
-      <Route exact path="MyCarRentalSite/SignIn" element={ <SignInSide/> }/>
+      <Route exact path="/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>
       <Route exact path="/SignUp" element={ <SignUp/> }/>
       <Route exact path="/city/:city" element={ <MyCity/> }/>
