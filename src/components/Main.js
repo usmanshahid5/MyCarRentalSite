@@ -13,7 +13,7 @@ import MyFeature         from './Features';
 const Main = () => {
   return (
     <Routes>
-      <Route exact path="/" element={ <Header/> }/>
+      <Route exact path={process.env.PUBLIC_URL + '/'} element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>
