@@ -9,9 +9,11 @@ import SignUp            from './SignUp/SignUp';
 import MyCity            from './citiesCatalog/index.js';
 import CarFlow           from './carDetails';
 import MyFeature         from './Features';
+import {BrowserRouter}   from 'react-router-dom';
 
 const Main = () => {
   return (
+    <BrowserRouter>
     <Routes basename={process.env.PUBLIC_URL}>
       <Route exact path="/" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
@@ -25,6 +27,7 @@ const Main = () => {
       <Route exact path='/allcars' element={ <AllCars/> }/>
 
     </Routes>
+    </BrowserRouter>
   )
 }
 
