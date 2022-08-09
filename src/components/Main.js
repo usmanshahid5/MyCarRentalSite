@@ -14,7 +14,6 @@ import {BrowserRouter as Router } from "react-router-dom"
 const Main = () => {
   return (
 
-      <Router>
         <Routes>
       <Route exact path="/MyCarRentalSite" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
@@ -27,7 +26,6 @@ const Main = () => {
       <Route exact path='/aboutus' element={ <AboutUs/> }/>
       <Route exact path='/allcars' element={ <AllCars/> }/>
         </Routes>
-    </Router>
   )
 }
 
