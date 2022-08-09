@@ -9,13 +9,12 @@ import SignUp            from './SignUp/SignUp';
 import MyCity            from './citiesCatalog/index.js';
 import CarFlow           from './carDetails';
 import MyFeature         from './Features';
-import {BrowserRouter as Router } from "react-router-dom"
 
 const Main = () => {
   return (
 
         <Routes>
-      <Route exact path="/" component={ <Header/> }/>
+      <Route exact path="/" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>

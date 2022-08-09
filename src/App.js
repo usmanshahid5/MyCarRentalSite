@@ -9,11 +9,7 @@ const App = () => {
   return (
 
     <div>
-      {/*<Profile/>*/}
       <Main/>
-      {/*<AboutUs/>*/}
-  {/*<Feature/>*/}
-  {/*    <AllCars/>*/}
     </div>
   )
 }
