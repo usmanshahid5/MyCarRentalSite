@@ -10,9 +10,9 @@ const App = () => {
 
     <div>
       {/*<Profile/>*/}
-      <Main/>
+      {/*<Main/>*/}
       {/*<AboutUs/>*/}
-  {/*<Feature/>*/}
+  <Feature/>
   {/*    <AllCars/>*/}
     </div>
   )
