@@ -14,8 +14,8 @@ import {BrowserRouter}   from 'react-router-dom';
 const Main = () => {
   return (
     <BrowserRouter>
-    <Routes basename={process.env.PUBLIC_URL}>
-      <Route exact path="/" element={ <Header/> }/>
+    <Routes>
+      <Route exact path="/MyCarRentalSite" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>
