@@ -3,13 +3,13 @@ import ReactDOM          from 'react-dom/client';
 import App               from "./App"
 import store             from "./components/store"
 import { Provider }      from 'react-redux';
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={ store }>
-    <HashRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App/>
-    </HashRouter>
+    </BrowserRouter>
   </Provider>
 );

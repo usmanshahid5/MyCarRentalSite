@@ -13,7 +13,7 @@ import {BrowserRouter}   from 'react-router-dom';
 
 const Main = () => {
   return (
-    <BrowserRouter>
+
     <Routes>
       <Route exact path="/MyCarRentalSite" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
@@ -27,7 +27,6 @@ const Main = () => {
       <Route exact path='/allcars' element={ <AllCars/> }/>
 
     </Routes>
-    </BrowserRouter>
   )
 }
 
