@@ -1,5 +1,5 @@
 import React             from 'react'
-import { Route, Routes, Switch } from "react-router-dom";
+import { Route, Routes, Switch, HashRouter } from "react-router-dom";
 import Header            from '../header/Header';
 import AboutUs           from './Aboutus/AboutUs';
 import AllCars           from './AllCars/AllCars';
@@ -13,7 +13,8 @@ import MyFeature         from './Features';
 const Main = () => {
   return (
 
-        <Routes>
+
+          <Routes>
       <Route exact path="/" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/SignIn" element={ <SignInSide/> }/>
@@ -24,7 +25,8 @@ const Main = () => {
       <Route exact path="/profile" element={ <Profile/> }/>
       <Route exact path='/aboutus' element={ <AboutUs/> }/>
       <Route exact path='/allcars' element={ <AllCars/> }/>
-        </Routes>
+          </Routes>
+
   )
 }
 
