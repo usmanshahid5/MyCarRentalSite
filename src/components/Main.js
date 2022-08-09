@@ -9,16 +9,16 @@ import SignUp            from './SignUp/SignUp';
 import MyCity            from './citiesCatalog/index.js';
 import CarFlow           from './carDetails';
 import MyFeature         from './Features';
-import {BrowseRouter as Router } from "react-router-dom"
+import {BrowserRouter as Router } from "react-router-dom"
 
 const Main = () => {
   return (
 
       <Router>
-      <Switch>
-      <Route exact path={process.env.PUBLIC_URL + '/'} element={ <Header/> }/>
+        <Routes>
+      <Route exact path="/MyCarRentalSite" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
-      <Route exact path="/MyCarRentalSite/SignIn" element={ <SignInSide/> }/>
+      <Route exact path="/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>
       <Route exact path="/SignUp" element={ <SignUp/> }/>
       <Route exact path="/city/:city" element={ <MyCity/> }/>
@@ -26,7 +26,7 @@ const Main = () => {
       <Route exact path="/profile" element={ <Profile/> }/>
       <Route exact path='/aboutus' element={ <AboutUs/> }/>
       <Route exact path='/allcars' element={ <AllCars/> }/>
-      </Switch>
+        </Routes>
     </Router>
   )
 }
