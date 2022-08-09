@@ -15,7 +15,8 @@ const Main = () => {
   return (
 
     <Routes>
-      <Route exact path="/MyCarRentalSite" element={ <Header/> }/>
+      <Switch>
+      <Route exact path="/" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>
@@ -25,7 +26,7 @@ const Main = () => {
       <Route exact path="/profile" element={ <Profile/> }/>
       <Route exact path='/aboutus' element={ <AboutUs/> }/>
       <Route exact path='/allcars' element={ <AllCars/> }/>
-
+      </Switch>
     </Routes>
   )
 }
