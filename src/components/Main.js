@@ -16,7 +16,7 @@ const Main = () => {
 
       <Router>
       <Switch>
-      <Route exact path="/MyCarRentalSite" element={ <Header/> }/>
+      <Route exact path={process.env.PUBLIC_URL + '/'} element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/MyCarRentalSite/SignIn" element={ <SignInSide/> }/>
       <Route exact path="/main" element={ <Header/> }/>
