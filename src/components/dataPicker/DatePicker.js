@@ -5,6 +5,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers-pro';
 import { AdapterDateFns }       from '@mui/x-date-pickers-pro/AdapterDateFns';
 import { DateRangePicker }      from '@mui/x-date-pickers-pro/DateRangePicker';
 import Box                      from '@mui/material/Box';
+import { Input } from "@mui/material"
 
 function getWeeksAfter(date, amount) {
   return date ? addWeeks(date, amount) : undefined;
@@ -31,9 +32,9 @@ export default function DatePicker() {
           } }
           renderInput={ (startProps, endProps) => (
             <React.Fragment>
-              <TextField { ...startProps } size="small" sx={ { width: '60%' } }/>
+              <Input placeholder={"Placeholder"} { ...startProps } id="standard-basic" label="Starting Date" variant="standard" size="small" sx={ { width: '40%' } } />
               <Box><div style={{color:"white"}}>to</div></Box>
-              <TextField { ...endProps } size="small" sx={ { width: '60%' } }/>
+              <Input placeholder="Placeholder" { ...endProps } id="standard-basic" variant="standard" size="small" sx={ { width: '40%' } } />
             </React.Fragment>
           ) }
         />

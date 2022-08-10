@@ -13,6 +13,7 @@ import { connect }         from "react-redux";
 import { GetCityData }     from "../components/action/action";
 import { NavLink }         from "react-router-dom";
 import DatePicker          from "../components/dataPicker/DatePicker";
+import img from "./20.jpg"
 
 
 const Header = ({ GetCityData, value }) => {
@@ -20,16 +21,28 @@ const Header = ({ GetCityData, value }) => {
   return (
     <>
       <ResponsiveAppBar/>
-      <div className="header">
-        <div className="header1"></div>
-        <div></div>
-        <div className='left21'>
-          <div className='leftcontent21'> The best Car Rental Service that you deserve, come to us</div>
+
+          <div className="datePicker2">
+            <div className="dateSetting">
+              <DatePicker style={ { marginLeft: "25%" } }/>
+            </div>
+          </div>
+      <div style={{display:"flex", width:"100%"}}>
+        <div style={{flex:"65%"}}>
+          <h2 className='leftcontent21'> The best <span style={{color:"#A48111", fontSize:"52px"}}>Car Rental Service</span> that you deserve, come to us</h2>
           <p className='smallpara'>Start your dream car journey with us, we will find best for you!</p>
+        </div>
+        <div style={{flex:"35%"}}>
+          <div><img src={img} style={{height:"90%", width:"100%",
+            borderRadius:"300px 0px 0px 100px", boxShadow: "rgb(218,165,32, .6) 10px 0px 0px 10px"
+          }}/></div>
+        </div>
+      </div>
+
 
             <Stack direction="row" spacing={ 2 }>
               <Button variant="contained" onClick={ () => GetCityData("") } className="contactButton"
-                      style={ { margin: "auto", backgroundColor: "#A48111", marginTop: "12px", color:"white" } }>
+                      style={ { margin: "auto", backgroundColor: "#A48111", color:"white", marginTop:"5vh" } }>
                 <div> <NavLink
                   to='/allcars'
                   style={{color:"white"}}
@@ -38,41 +51,28 @@ const Header = ({ GetCityData, value }) => {
               </Button>
             </Stack>
 
-          <div className="datePicker2">
-            <div className="dateSetting">
-              <DatePicker style={ { marginLeft: "20%" } }/>
-            </div>
-          </div>
-        </div>
-
-        <div className='right'>
-          <div className='rightImg'></div>
-        </div>
-      </div>
-
-      <div data-aos="fade-up" style={ { fontSize: "30px", marginTop: "3%", textAlign: "center" } }>This time to travel
-        in your desired <strong><span style={ { color: "#A48111", fontSize: "40px" } }>Cars!</span></strong></div>
-      <hr style={ { width: "80%" } }/>
-      <div data-aos="fade-up" style={ { backgroundColor: "#FAFAFA", padding: "20px" } }>
-        <div style={ { fontSize: "26px", marginLeft: "6%", marginTop: "3%" } }><strong>Our <span
+      <h1 data-aos="fade-up" className="belowHeading">This time to travel
+        in your desired <strong><span style={ { color: "#A48111", fontSize: "40px" } }>Cars!</span></strong></h1>
+      <div data-aos="fade-up" style={ { backgroundColor: "#FAFAFA", padding: "20px", marginTop:"3%" } }>
+        <div style={ { fontSize: "32px", marginLeft: "6%", marginTop: "3%", fontFamily:"Inter" } }><strong>Our <span
           style={ { color: "#A48111" } }>Feautured</span> Cars</strong></div>
-        <div style={ { fontSize: "16px", marginLeft: "6%", marginTop: "2%", opacity: ".7", width: "70%" } }>Lorem Ipsum
+        <div style={ { fontSize: "18px",fontFamily:"Inter", marginLeft: "6%", marginTop: "2%", opacity: ".8", width: "80%" } }> Lorem Ipsum
           is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
           dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
           specimen book. It has survived not only five centuries
         </div>
 
-        <div style={ { marginTop: "3%" } }>
+        <div className="catalog1">
           <Catalog/></div>
       </div>
       <div data-aos="fade-up" style={ { display: "flex", height: "70vh", marginTop: "4%" } }>
         <div style={ { flex: "60%" } }>
-          <div style={ { height: "70%", width: "80%" } } className="browse"></div>
+          <div className="browse"></div>
         </div>
 
-        <div className="righth"><h2><strong style={ { color: "#A48111" } }>Vacations?</strong> So, Let's Go!</h2>
+        <div className="righth"><h2 style={{fontSize:"32px"}}><strong style={ { color: "#A48111",fontFamily:"Inter" } }>Vacations?</strong> So, Let's Go!</h2>
           <div style={ { textAlign: "center" } }>
-            <div style={ { fontSize: "16px", marginTop: "1%", opacity: ".7", margin: "auto", width:"80%" } }>Lorem Ipsum is simply
+            <div style={ { fontSize: "18px",fontFamily:"Inter", marginTop: "1%", opacity: ".7", margin: "auto", width:"80%" } }>Lorem Ipsum is simply
               dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
               text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
             </div>
@@ -82,9 +82,9 @@ const Header = ({ GetCityData, value }) => {
       </div>
       <div data-aos="fade-up">
         <div style={ { backgroundColor: "#FAFAFA", padding: "20px" } }>
-          <div style={ { fontSize: "26px", marginLeft: "6%", marginTop: "3%" } }><strong>Do you want to go on <span
+          <div style={ { fontSize: "32px", marginLeft: "6%", marginTop: "3%",fontFamily:"Inter"  } }><strong>Do you want to go on <span
             style={ { color: "#A48111" } }>VACATIONS!</span></strong></div>
-          <div style={ { fontSize: "16px", marginLeft: "6%", marginTop: "1%", opacity: ".7", width: "70%" } }>Lorem
+          <div style={ { fontSize: "18px",fontFamily:"Inter" , marginLeft: "6%", marginTop: "1%", opacity: ".7", width: "70%" } }>Lorem
             Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
             standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
             make a type specimen book. It has survived not only five centuries
@@ -94,9 +94,9 @@ const Header = ({ GetCityData, value }) => {
         <CitiesCatalog/></div>
 
       <div data-aos="fade-up" style={ { display: "flex", height: "70vh", marginTop: "4%" } }>
-        <div className="left2"><h2><strong style={ { color: "#A48111" } }>Our Clients</strong> Explore them</h2>
+        <div className="left2"><h2><strong style={ { color: "#A48111",fontFamily:"Inter", fontSize:"32px" } }>Our Clients</strong> Explore them</h2>
           <div style={ { textAlign: "center" } }>
-            <div style={ { fontSize: "16px", marginLeft: "6%", marginTop: "1%", opacity: ".7", margin: "auto", width:"70%" } }>Lorem
+            <div style={ { fontSize: "18px",fontFamily:"Inter" , marginLeft: "6%", marginTop: "1%", opacity: ".7", margin: "auto", width:"70%" } }>Lorem
               Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
               standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
               to make a type
@@ -120,14 +120,14 @@ const Header = ({ GetCityData, value }) => {
 
       </div>
       <div className="FeatureCatalog">
-         <h3 style={{marginLeft:"10%", color:"#A48111"}}>Our Features</h3>
-        <div style={{marginLeft:"10%", width:"70%", opacity:".7"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </div>
+         <h3 style={{marginLeft:"10%", color:"#A48111",fontFamily:"Inter", fontSize:"32px"}}>Our Features</h3>
+        <div style={{marginLeft:"10%", width:"70%", opacity:".7",fontFamily:"Inter", fontSize:"18px"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </div>
       <FeauturesCatalog/>
       </div>
       <div data-aos="fade-up" style={ { backgroundColor: "#FAFAFA", padding: "20px" } }>
-        <div style={ { fontSize: "26px", marginLeft: "6%", marginTop: "6%" } }><strong>Our Happy <span
-          style={ { color: "#A48111" } }>Customers!</span></strong></div>
-        <div style={ { fontSize: "16px", marginLeft: "6%", marginTop: "1%", opacity: ".7", width: "70%" } }>Lorem Ipsum
+        <div style={ { fontSize: "32px", marginLeft: "6%", marginTop: "6%" } }><strong>Our Happy <span
+          style={ { color: "#A48111",fontFamily:"Inter" } }>Customers!</span></strong></div>
+        <div style={ { fontSize: "18px",fontFamily:"Inter", marginLeft: "6%", marginTop: "1%", opacity: ".7", width: "70%" } }>Lorem Ipsum
           is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
           dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
           specimen book. It has survived not only five centuries

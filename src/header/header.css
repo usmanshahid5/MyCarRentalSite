@@ -21,18 +21,18 @@ body {
 }
 
 .datePicker2 {
-  margin-left: 15%;
-  padding-top: 15px;
-  border-radius: 20px;
+  border-radius: 50px;
+  margin: auto;
   color: black;
-  height: 70px;
-  width: 70%;
+  height: 7%;
+  width: 360px;
   background-color: white;
   bottom: 0;
-  box-shadow: rgba(240, 235, 235, 0.4) 10px 20px 29px 10px;
+  box-shadow: rgb(218,165,32, .3) 2px 5px 5px 2px;
   border: 0px;
   float: bottom;
-  margin-top: 30px;
+  margin-top: 16vh;
+  opacity: 1;
 
 }
 
@@ -70,12 +70,15 @@ body {
 }
 
 .browse {
-  background-image: url('../components/Images/cardImages/vacations.jpg');
+  background-image: url('../components/Images/cardImages/20.jpg');
+  border-radius:60px 200px 100px 20px;
   background-size: cover;
   background-position: center;
   margin: auto;
   margin-top: 8%;
-  border-radius: 60px 10px 60px 10px;
+  box-shadow: rgb(218,165,32, .4) 6px 0px 0px 6px;
+  height: 70%;
+  width: 80%;
 }
 
 .browse2 {
@@ -84,21 +87,29 @@ body {
   background-position: center;
   margin: auto;
   margin-top: 8%;
-  border-radius: 60px 10px 60px 10px;
+  box-shadow: rgb(218,165,32, .4) 0px 10px 10px 10px;
+  border-radius:200px 60px 20px 100px;
 }
+
+/*.leftcontent21 {*/
+/*  margin-left: 7.58%;*/
+/*  margin-top: 8vh;*/
+/*  font-family: 'Inter';*/
+/*  font-style: normal;*/
+/*  font-weight: 600;*/
+/*  font-size: 50px;*/
+/*  color: black;*/
+/*}*/
 
 .leftcontent21 {
   margin-left: 7.58%;
-  /* margin-right: 10%; */
-  margin-top: 22%;
-
-
+  margin-top: 8vh;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 46px;
-
-  color: #FFFFFF;
+  font-size: 60px;
+  color: black;
+  width: 60%;
 }
 
 .smallpara {
@@ -109,14 +120,14 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  color: white;
+  color: black;
+  opacity: .7;
 
 }
 
 .contactButton {
   width: 230px;
   height: 60px;
-  margin-top: 10px;
 }
 
 .righth {
@@ -134,16 +145,41 @@ body {
   text-align: center;
   margin-top: 15vh;
 }
-
-.dateSetting {
-  margin-left: 10%;
-  margin-top: -1%;
+.belowHeading{
+  margin-top: 5%;
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 46px;
+}
+.catalog1{
+  margin-top: 10vh;
 }
 
+.dateSetting {
+  margin-left: 13%;
+  margin-top: -3%;
+}
+@media (max-width: 1000px) {
+  .belowHeading{
+    margin-top: 10%;
+    font-size: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .contactButton{
+    height: 50px;
+    width: 180px;
+  }
+  .smallpara{
+    font-size: 20px;
+  }
+}
+
+
 @media (max-width: 800px) {
+
   .datePicker2 {
-    width: 100%;
-    margin-left: -1%;
+    width: 360px;
   }
 
   .browse {
@@ -160,15 +196,13 @@ body {
 
   .leftcontent21 {
 
-    /* font-size: 8vw; */
-    width: 100%;
-    font-size: 32px;
-    margin-top: 40%;
+    font-size: 36px;
+  width: 70vw;
   }
 
   .smallpara {
-    font-size: 20px;
-    width: 100%;
+    font-size: 5vw;
+    width: 70%;
   }
 
   .righth {

@@ -42,7 +42,7 @@ const ResponsiveAppBar = () => {
 
   return (
 
-    <AppBar style={ { zIndex: "1", backgroundColor: "black", opacity: ".8", position: "fixed" } }>
+    <AppBar style={ { zIndex: "2", backgroundColor: "black", position: "fixed" } }>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <div className='logoimg' sx={ { display: { xs: 'none', md: 'flex' }, mr: 1 } }/>
@@ -140,7 +140,7 @@ const ResponsiveAppBar = () => {
 
           <Box sx={ { flexGrow: 0 } }>
             <Tooltip title="Open settings">
-              <IconButton onClick={ handleOpenUserMenu } sx={ { p: 0 } } style={{borderColor:"#A48111"}}>
+              <IconButton onClick={ handleOpenUserMenu } sx={ { p: 0, borderColor:"#A48111" } }>
                 <Avatar alt="Remy Sharp" src={ img1 } />
               </IconButton>
             </Tooltip>
