@@ -12,9 +12,11 @@ const CarFlow = () => {
         data.filter(val => val.id == `${ id }`).map((val) => {
           return <CarDetails
             city={ val.city }
+            image = {val.image}
             image1={ val.image1 }
             image2={ val.image2 }
             image3={ val.image3 }
+            briefHeading={val.briefHeading}
 
           />
         })

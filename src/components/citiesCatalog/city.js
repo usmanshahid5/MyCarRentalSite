@@ -1,11 +1,18 @@
-import React            from 'react';
-import { NavLink }      from 'react-router-dom';
-import Catalog          from '../carCatalog/Catalog';
-import data             from '../carCatalog/data';
-import Home             from '../home/home';
-import Footer           from '../Footer/Footer';
-import { Box }          from '@mui/material';
-import { Grid }         from '@mui/material';
+import Button                  from '@mui/material/Button';
+import Card                    from '@mui/material/Card';
+import CardMedia               from '@mui/material/CardMedia';
+import Stack                   from '@mui/material/Stack';
+import Carousel                from 'nuka-carousel';
+import { useState }            from 'react';
+import React                   from 'react';
+import { NavLink }             from 'react-router-dom';
+import AllCarPics              from '../AllCars/pic';
+import Catalog                 from '../carCatalog/Catalog';
+import data                    from '../carCatalog/data';
+import Home                    from '../home/home';
+import Footer                  from '../Footer/Footer';
+import { Box, CardActionArea } from '@mui/material';
+import { Grid }                from '@mui/material';
 import ResponsiveAppBar from '../navbar/navbar';
 import InputLabel       from '@mui/material/InputLabel';
 import MenuItem         from '@mui/material/MenuItem';
@@ -16,140 +23,198 @@ import { connect }      from 'react-redux';
 import DatePicker       from '../dataPicker/DatePicker';
 import './city.css';
 import "aos";
+import img              from "../Images/cardImages/2.jpg"
+import myImages         from './images';
 
-const City = (props, { value }) => {
-  const [Location, setLocation] = React.useState('');
-  const [Location1, setLocation1] = React.useState('');
+const City = (props) => {
+  const [make, setMake] = useState('All');
+  const [year, setyear] = useState('All');
+  const [city, setCity] = useState('All');
 
   const handleChange = (event) => {
-    setLocation(event.target.value);
+    setMake(event.target.value);
   };
 
-  const handleChange1 = (event) => {
-    setLocation1(event.target.value);
+  const handleChangeCity = (event) => {
+    setCity(event.target.value);
   };
+
+
+
+  const handleChangeYear = (event) => {
+    setyear(event.target.value);
+  };
+
   return (
     <>
       <div>
         <ResponsiveAppBar/>
         <div className='head' style={ { backgroundImage: `url(${ props.image })` } }>
-          <div className='d1'></div>
-          <div className='d2'> { !!value ? value : "" } We are now at<span
+          <div className='d1'>
+          </div>
+          <div className='d2'> We are now at<span
             style={ { fontSize: "60px", color: "#A48111", fontWeight: "600", width: "90%" } }> { props.city } </span> to
             provide you the best car service of the town
           </div>
           <div className='d3'>So, come to us to experience the best drives of the town</div>
           <div className="datePicker3">
             <div className="dateSetting3">
-              <DatePicker style={ { marginLeft: "20%" } }/>
+              <DatePicker style={ { marginLeft: "25%" } }/>
             </div>
           </div>
         </div>
 
 
-        <div data-aos="fade-up"
-             style={ { fontSize: "30px", marginTop: "3%", textAlign: "center", color: "#A48111" } }>So, let's Explore
+        <h1 data-aos="fade-up"
+             style={ { fontSize: "46px", marginTop: "3%", textAlign: "center", color: "#A48111", fontFamily:"Inter" } }>So, let's Explore
           our Cars!
-        </div>
+        </h1>
         <hr style={ { width: "80%" } }/>
         <div data-aos="fade-up" style={ { backgroundColor: "#FAFAFA", padding: "20px" } }>
-          <div style={ { fontSize: "26px", marginLeft: "6%", marginTop: "3%" } }><strong>The Best cars
-            at { props.city }</strong></div>
-          <div style={ { fontSize: "16px", marginLeft: "6%", marginTop: "1%", opacity: ".7", width: "70%" } }>Lorem
+          <div style={ { fontSize: "32px", marginLeft: "6%", marginTop: "3%", fontFamily:"Inter" } }>The Best cars
+            at <span style={{color:"#A48111"}}>{ props.city }</span></div>
+          <div style={ { fontSize: "18px", marginLeft: "6%", marginTop: "1%", opacity: ".7", width: "70%" } }>Lorem
             Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
             standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
             make a type specimen book. It has survived not only five centuries
           </div>
-          {/* <Catalog/> */ }
-
-          <div data-aos="fade-up" style={ { display: "flex", width: "100%" } }>
-            <div style={ { flex: "2%", marginLeft: "4%" } }><Box sx={ { minWidth: 120 } } style={ {
-              marginTop: "40px",
-              width: "200px",
-              marginLeft: "5%",
-              backgroundColor: "white"
-            } }>
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Make</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={ Location1 }
-                  label="Make"
-                  onChange={ handleChange1 }
-                >
-                  <MenuItem value={ 10 }>Audi</MenuItem>
-                  <MenuItem value={ 20 }>Lamborghini</MenuItem>
-                  <MenuItem value={ 30 }>Range Rover</MenuItem>
-                  <MenuItem value={ 40 }>Land Cruiser</MenuItem>
-                  <MenuItem value={ 50 }>Honda Civic</MenuItem>
-                  <MenuItem value={ 60 }>Poarshe</MenuItem>
-                </Select>
-              </FormControl>
-            </Box></div>
-            <div style={ { flex: "70%" } }>
-              <Box sx={ { minWidth: 120 } }
-                   style={ { marginTop: "40px", width: "200px", marginLeft: "5%", backgroundColor: "white" } }>
+          <div className="myAllCarMain">
+            <div className="myAllCarMainLeft">
+              <Box  sx={{ width:"100%", margin:"10px"}}>
                 <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Model</InputLabel>
+                  <InputLabel id="demo-simple-select-label">Make</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={ Location }
-                    label="Model"
-                    onChange={ handleChange }
+                    value={make}
+                    label="Make"
+                    onChange={handleChange}
                   >
-                    <MenuItem value={ 10 }>2011</MenuItem>
-                    <MenuItem value={ 20 }>2012</MenuItem>
-                    <MenuItem value={ 30 }>2013</MenuItem>
-                    <MenuItem value={ 40 }>2014</MenuItem>
-                    <MenuItem value={ 50 }>2021</MenuItem>
-                    <MenuItem value={ 60 }>2022</MenuItem>
+                    <MenuItem value={"Lamborghini"}>Lamborghini</MenuItem>
+                    <MenuItem value={"Range Rover"}>Range Rover</MenuItem>
+                    <MenuItem value={"Poarche"}>Poarche</MenuItem>
+                    <MenuItem value={"Audi"}>Audi</MenuItem>
+                    <MenuItem value={"BMW"}>BMW</MenuItem>
+                    <MenuItem value={"All"}>All</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            {/*Year*/}
+            <div className="myAllCarMainCenter">
+              <Box sx={{ width:"100%"}} className="myAllCarMainCenter">
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Year</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={year}
+                    label="year"
+                    onChange={handleChangeYear}
+                  >
+                    <MenuItem value={"2016"}>2016</MenuItem>
+                    <MenuItem value={"2017"}>2017</MenuItem>
+                    <MenuItem value={"2018"}>2018</MenuItem>
+                    <MenuItem value={"2019"}>2019</MenuItem>
+                    <MenuItem value={"2020"}>2020</MenuItem>
+                    <MenuItem value={"2021"}>2021</MenuItem>
                   </Select>
                 </FormControl>
               </Box>
             </div>
 
+            {/*//City*/}
+            <div className="myAllCarMainRight">
+              <Box sx={{ width:"100%", margin:"10px" }} >
+                <FormControl fullWidth style={{width:"100%"}}>
+                  <InputLabel id="demo-simple-select-label">City</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={city}
+                    label="City"
+                    onChange={handleChangeCity}
+                  >
+                    <MenuItem value={"Dubai"}>Dubai</MenuItem>
+                    <MenuItem value={"Newyork"}>Newyork</MenuItem>
+                    <MenuItem value={"Boston"}>Boston</MenuItem>
+                    <MenuItem value={"Phoenix"}>Phoenix</MenuItem>
+                    <MenuItem value={"Miami"}>Miami</MenuItem>
+                    <MenuItem value={"Washigton"}>Washington</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
           </div>
 
 
-          <Box className='boxh' data-aos="fade-up">
-            <Grid container spacing={ { xs: 2, md: 3 } } columns={ { xs: 1, sm: 8, md: 12 } }>
-              { data.map((val) => (
-                <Grid item xs={ 2 } sm={ 4 } md={ 4 }>
-                  <NavLink
-                    to={ `/carDescription/${ val.id }` }
 
-                  >
+          <Box className='boxh' data-aos="fade-up">
+            <Grid container spacing={ { xs: 2, md: 3 } } columns={ { xs: 2, sm: 12, md: 12 } }>
+              {make == "All" && year=="All" && city=="All"?data.map(val=>(
+                <Grid item xs={ 12 } sm={ 6 } md={ 3 }>
                   <Home
                     image={ val.image1 }
                     title={ val.title }
                     description={ val.description }
-                  /></NavLink>
-                </Grid>)) }
+                  />
+                </Grid>
+              ) ): make=="All" && !!year || !!city?data.filter(val=>val.year==year && val.city==city ).map((val)=>(
+                  <Grid item xs={ 12 } sm={ 6 } md={ 3 }>
+                    <Home
+                      image={ val.image1 }
+                      title={ val.title }
+                      description={ val.description }
+                    />
+                  </Grid>
+                )):
+                data.filter(val=>(val.title==make && val.year==year)).map((val) => (
+                  <Grid item xs={ 12 } sm={ 6 } md={ 3 }>
+                    <Home
+                      image={ val.image1 }
+                      title={ val.title }
+                      description={ val.description }
+                    />
+                  </Grid>)) }
             </Grid>
 
           </Box>
         </div>
 
-        <div className='main' data-aos="fade-up">
-          <div className='left'>
-            <div className='left-content' style={ { backgroundImage: `url(${ props.image })` } }>
-
-            </div>
+        <div data-aos="fade-up" style={ { display: "flex", height: "70vh", marginTop: "4%" } }>
+          <div style={ { flex: "60%" } }>
+              <img src={props.image} className="browse" style={{marginLeft:"10%"}}/>
           </div>
-          <div className='right'>
-            <div className='right-content'>
-              <div style={ { textAlign: "center", width: "60%", margin: "auto", marginTop: "10%" } } className>
-                <h2 style={ { color: "#A48111" } }>Hello World</h2>
-                <div style={ { fontSize: "20px", textAlign: "center", fontWeight: "600", opacity: ".7", width:"100%", marginRight:"20%" } }>This ia a
-                  great city to explore, so get our best cars in the whole town to explore them!
-                </div>
+
+          <div className="righth"><h2 style={{fontSize:"32px"}}><strong style={ { color: "#A48111",fontFamily:"Inter" } }>Vacations?</strong> So, Let's Go!</h2>
+            <div style={ { textAlign: "center" } }>
+              <div style={ { fontSize: "18px",fontFamily:"Inter", marginTop: "1%", opacity: ".7", margin: "auto", width:"80%" } }>Lorem Ipsum is simply
+                dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
               </div>
             </div>
           </div>
+
         </div>
-        <div style={ { textAlign: "center", marginTop: "70px" } }>
+        {/*/////////////////Catalog*/}
+        <Carousel wrapAround={true}
+                  slidesToShow={1}
+        >
+          { myImages.map((val)=>
+            <Card sx={{  width: 3/4, height:400, margin:"auto", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  image={val.image}
+                  alt="Car Picture"
+                  height="400"
+                  style={{ backgroundSize:"cover", }}
+                />
+              </CardActionArea>
+            </Card> )}
+        </Carousel>
+
+        <div style={ { textAlign: "center", marginTop: "70px", fontFamily:"Inter" } }>
           <h1 style={ { textAlign: "center", color: "#A48111" } }>Best Towns in { props.city }</h1>
           <h4 style={ { margin: "auto", opacity: ".7", fontWeight: "500", width: "80%", textAlign: "center" } }>Almost
             all the towns of Newyork are extremely great, but here is some we most love!</h4>
@@ -184,33 +249,37 @@ const City = (props, { value }) => {
 
       </div>
       <div className="CatalogStyle" data-aos="fade-up">
-        <div style={ { marginLeft: "6%", paddingTop: "4%", paddingBottom: "3%" } }>
-          <h3 style={ { color: "#A48111" } }>Our best hosts in { props.city }</h3>
-          <div style={ { opacity: ".7", fontWeight: "500" } }>Lorem Ipsum is simply dummy text of the printing s,</div>
+        <div style={ { marginLeft: "6%", paddingTop: "4%", paddingBottom: "3%", fontFamily:"Inter" } }>
+          <div style={ { color: "#A48111", fontSize:"32px" } }>Our best hosts in { props.city }</div>
+          <div style={ { opacity: ".7", fontSize:"18px", width:"70%" } }>Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</div>
           <hr style={ { width: "80%" } }/>
+          <div style={{marginTop:"8vh"}}>
           <Catalog/>
+          </div>
         </div>
       </div>
 
-      <div className='main1' data-aos="fade-up">
-        <div className='left1'>
-          <div className='left-content1'>
-            <div style={ { textAlign: "center", width: "60%", margin: "auto", marginTop: "10%" } }>
-              <h2 style={ { textAlign: "center", color: "#A48111" } }>Hello World</h2>
-              <div style={ { fontSize: "20px", textAlign: "center", fontWeight: "600", opacity: ".7" } }>This ia a great
-                city to explore, so get our best cars in the whole town to explore them!
-              </div>
+      {/*/////////////////////////*/}
+
+      <div data-aos="fade-up" style={ { display: "flex", height: "70vh", marginTop: "2%" } }>
+        <div className="left2"><h2><strong style={ { color: "#A48111",fontFamily:"Inter", fontSize:"32px" } }>Our Clients</strong> Explore them</h2>
+          <div style={ { textAlign: "center" } }>
+            <div style={ { fontSize: "18px",fontFamily:"Inter" , marginLeft: "6%", marginTop: "1%", opacity: ".7", margin: "auto", width:"70%" } }>Lorem
+              Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+              to make a type
             </div>
           </div>
         </div>
-
-        <div className='right1'>
-          <div className='right-content1' style={ { backgroundImage: `url(${ props.image })` } }></div>
+        <div style={ { flex: "60%" } }>
+          <div style={ { height: "70%", width: "80%" } } className="browse2"></div>
         </div>
       </div>
 
       <div style={ { marginTop: "70px", width: "100%", marginBottom: "5%", backgroundColor: "#F0F0F0" } }>
-        <div style={ { marginLeft: "6%", paddingTop: "4%", paddingBottom: "3%" } }>
+        <div style={ { marginLeft: "6%", paddingTop: "4%", paddingBottom: "3%", fontFamily:"Inter" } }>
           <h3 style={ { color: "#A48111" } }>Reviews and Feedbacks</h3>
           <div style={ { opacity: ".7", fontWeight: "500" } }>Lorem Ipsum is simply dummy text of the printing s,</div>
           <hr style={ { width: "80%" } }/>

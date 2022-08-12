@@ -1,6 +1,8 @@
 .boxh {
   text-align: -webkit-center;
-  margin-top: 3%;
+  margin-top: 10vh;
+  width: 83%;
+  margin: auto;
 }
 
 .drop {

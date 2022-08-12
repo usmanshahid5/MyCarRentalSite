@@ -8,7 +8,7 @@ import img1        from "../Images/cardImages/22.jpg"
 
 export default function CarHosts() {
   return (
-    <Card sx={ { display: 'flex', height: "150px", width: 540 } }>
+    <Card sx={ { display: 'flex', height: "150px", width: 450 } }>
       <Box sx={ { display: 'flex', flexDirection: 'column' } }>
         <CardMedia
           component="img"
@@ -18,10 +18,10 @@ export default function CarHosts() {
         />
       </Box>
       <CardContent sx={ { flex: '1 0 auto' } }>
-        <Typography component="div" variant="h6">
+        <Typography style={{fontFamily:"Inter"}} component="div" variant="h6">
           Henry
         </Typography>
-        <Typography variant="subtitle2" color="text.secondary" component="div" style={ { width: "40%" } }>
+        <Typography variant="subtitle2" color="text.secondary" component="div" style={ { width: "40%", fontFamily:"Inter" } }>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
           standard dummy text ever since the 1500s,
         </Typography>

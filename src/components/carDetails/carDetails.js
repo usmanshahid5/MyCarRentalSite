@@ -1,15 +1,19 @@
-import React                 from "react";
-import { Carousel }          from 'react-responsive-carousel';
-import DatePicker            from "../dataPicker/DatePicker";
-import Maps                  from "../../maps/maps";
-import Radio                 from '@mui/material/Radio';
-import RadioGroup            from '@mui/material/RadioGroup';
-import FormControlLabel      from '@mui/material/FormControlLabel';
-import FormControl           from '@mui/material/FormControl';
-import FormLabel             from '@mui/material/FormLabel';
-import { Button }            from "@mui/material";
-import CarHosts              from "../CarHost/CarHosts";
-import Catalog               from "../carCatalog/Catalog";
+import Card                       from '@mui/material/Card';
+import CardMedia                  from '@mui/material/CardMedia';
+import Typography                 from '@mui/material/Typography';
+import React                      from "react";
+import Carousel from "nuka-carousel"
+import AllCarPics                 from '../AllCars/pic';
+import DatePicker                 from "../dataPicker/DatePicker";
+import Maps                       from "../../maps/maps";
+import Radio                      from '@mui/material/Radio';
+import RadioGroup                 from '@mui/material/RadioGroup';
+import FormControlLabel           from '@mui/material/FormControlLabel';
+import FormControl                from '@mui/material/FormControl';
+import FormLabel                  from '@mui/material/FormLabel';
+import { Button, CardActionArea } from "@mui/material";
+import CarHosts                   from "../CarHost/CarHosts";
+import Catalog                    from "../carCatalog/Catalog";
 import Footer                from "../Footer/Footer";
 import MyRatingPanel         from "../Ratings/Rating";
 import { AiFillCar }         from "react-icons/ai";
@@ -30,31 +34,60 @@ import "./carDetails.css"
 
 const CarDetails = (props) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  const ColorAlerts = () => {
-    return (
-      <Alert severity="success" color="info">
-        This is a success alert — check it out!
-      </Alert>
-    );
-  }
+  const myallimage = props.image
+  console.log(myallimage, "22222222222")
   return (
     <>
       <ResponsiveAppBar/>
       <div>
-
         <div className='head-h'>
           <div className='left-l'>
-            <div style={ { marginTop: "4%" } }>
-              <Carousel className="slider-container">
-                <div>
-                  <img src={ props.image1 }/>
-                </div>
-                <div>
-                  <img src={ props.image2 }/>
-                </div>
-                <div>
-                  <img src={ props.image3 }/>
-                </div>
+            <div style={ { marginTop: "15vh" } }>
+              <Carousel wrapAround={true}
+                        slidesToShow={1}>
+
+                  <Card sx={{  width: 3/4, height:400, margin:"auto", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        image={ props.image1}
+                        image = {props.image2}
+                        alt="Car Picture"
+                        height="400"
+                        style={{ backgroundSize:"cover", }}
+                      />
+                    </CardActionArea>
+                  </Card>
+
+                <Card sx={{  width: 3/4, height:400, margin:"auto", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      image={ props.image1}
+                      alt="Car Picture"
+                      height="400"
+                      style={{ backgroundSize:"cover", }}
+                    />
+                    <Typography gutterBottom variant="h8" component="div" className='label' style={{fontWeight:"600", fontFamily:"Inter", textAlign:"center", marginTop:"20px"}}>
+                      Wedding Cars
+                    </Typography>
+                  </CardActionArea>
+                </Card>
+
+                <Card sx={{  width: 3/4, height:400, margin:"auto", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      image={ props.image3}
+                      alt="Car Picture"
+                      height="400"
+                      style={{ backgroundSize:"cover", }}
+                    />
+                    <Typography gutterBottom variant="h8" component="div" className='label' style={{fontWeight:"600", fontFamily:"Inter", textAlign:"center", marginTop:"20px"}}>
+                      Wedding Cars
+                    </Typography>
+                  </CardActionArea>
+                </Card>
               </Carousel>
             </div>
 
@@ -99,14 +132,18 @@ const CarDetails = (props) => {
 
         <div data-aos="fade-up">
           <div style={ { marginLeft: "10%" } } className="Description">
-            <h2 style={ { width: "70%", marginTop: "9%" } }>Jeep Grand Cherokee 2018</h2>
-            <p className="content1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            <h2 style={ { width: "70%", marginTop: "9%", fontFamily:"Inter" } }>{props.briefHeading}</h2>
+            <p className="content1" style={{fontFamily:"Inter",opacity:".7"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
               Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
               galley of type and scrambled it to make a type specimen book. </p>
           </div>
         </div>
-        <div>
-          <h3 style={ { marginLeft: "10%", marginTop: "4%" } }>About Car</h3>
+        <div style={{backgroundColor:"#F1EBC5", padding:"20px", paddingBottom:"50px"}}>
+        <div style={{marginLeft:"10%"}}>
+          <h3 style={{ marginTop: "4%", fontFamily:"Inter" }}>About Car</h3>
+          <p className="content1" style={{fontFamily:"Inter",opacity:".7"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+            galley of type and scrambled it to make a type specimen book. </p>
           <div className="feature-main" data-aos="fade-up">
             <div style={ { flex: "20%" } } className="feature-1">
               <div className="feature"><AiFillCar/> 4 Doors</div>
@@ -123,8 +160,12 @@ const CarDetails = (props) => {
               <div className="feature"><BsFillSunFill/> Sunroof</div>
             </div>
           </div>
+        </div></div>
+        <div></div>
           <div style={ { marginLeft: "10%" } } data-aos="fade-up">
-            <h3 className="host"> Host by: </h3>
+            <h3 className="host" style={{fontFamily:"Inter"}}> Host by: </h3>
+            <p className="content1" style={{fontFamily:"Inter",opacity:".7"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
             <div style={ { marginTop: "2%" } }>
               <CarHosts/>
             </div>
@@ -133,6 +174,8 @@ const CarDetails = (props) => {
             <MyRatingPanel/>
           </div>
           <h3 data-aos="fade-up" className="Catalog">Other Cars</h3>
+        <p className="content1" style={{fontFamily:"Inter",opacity:".7", marginLeft:"10%"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
           <div data-aos="fade-up">
             <Catalog/>
           </div>
@@ -140,7 +183,6 @@ const CarDetails = (props) => {
             <Footer/>
           </div>
         </div>
-      </div>
     </>
   );
 }

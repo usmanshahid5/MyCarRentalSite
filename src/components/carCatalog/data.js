@@ -13,17 +13,24 @@ import img12 from "../Images/cardImages/26.jpg"
 import img13 from "../Images/cardImages/133.jpg"
 import img14 from "../Images/cardImages/134.jpeg"
 import img15 from "../Images/cardImages/135.jpeg"
+import img16 from "./4.JPG"
+import img17 from "./5.jpg"
+import img18 from "./6.jpg"
 
 const data = [
   {
     id: "1",
+    image:{
+      image4 : img1, img2, img3
+    },
     image1: img1,
-    image2: img2,
+    image2:img2,
     image3: img3,
     title: "Range Rover",
     description: "Lorem Ipsum is simply dummy text of the printing",
     city: "Dubai",
-    year:"2018"
+    year:"2018",
+    briefHeading:"Range Rover 2022"
   },
   {
     id: "2",
@@ -33,7 +40,8 @@ const data = [
     title: "Audi",
     description: "Lorem Ipsum is simply dummy text of the printing",
     city: "Dubai",
-    year:"2018"
+    year:"2018",
+    briefHeading:"Audi A8 2022"
   }, {
     id: "3",
     image1: img7,
@@ -42,7 +50,8 @@ const data = [
     title: "Lamborghini",
     description: "Lorem Ipsum is simply dummy text of the printing",
     city: "Dubai",
-    year:"2017"
+    year:"2017",
+    briefHeading:"Lamborgini 2019"
   }, {
     id: "4",
     image1: img10,
@@ -51,7 +60,8 @@ const data = [
     title: "BMW",
     description: "Lorem Ipsum is simply dummy text of the printing",
     city: "Washigton",
-    year:"2021"
+    year:"2021",
+    briefHeading:"BMW 2019"
   },{
     id: "5",
     image1: img13,
@@ -60,7 +70,19 @@ const data = [
     title: "Poarche",
     description: "Lorem Ipsum is simply dummy text of the printing",
     city: "NewYork",
-    year:"2021"
-  }
+    year:"2021",
+    briefHeading:"Poarche 2021"
+  },
+  {
+    id: "6",
+    image1: img16,
+    image2: img17,
+    image3: img18,
+    title: "Roll Royce",
+    description: "Lorem Ipsum is simply dummy text of the printing",
+    city: "Dubai",
+    year:"2019",
+    briefHeading:"Roll Royce 2022"
+  },
 ]
 export default data

@@ -1,11 +1,11 @@
 .head-h {
   display: flex;
-  height: 100vh;
+  height: 70vh;
   margin-top: 2%;
 }
 
 .left-l {
-  height: 100vh;
+  height: 70vh;
   flex: 60%;
 }
 
@@ -38,15 +38,15 @@
 }
 
 .content1 {
-  width: 80%;
+  width: 70%;
   font-size: 20px;
 }
 
 .feature-main {
   display: flex;
   width: 40%;
-  margin-left: 15%;
-  margin-top: 1%;
+  /*margin-left: 15%;*/
+  margin: auto;
 }
 
 .feature-1 {
@@ -69,6 +69,7 @@
 .Catalog {
   margin-left: 10%;
   margin-top: 4%;
+  font-family: Inter;
 }
 
 @media (max-width: 800px) {

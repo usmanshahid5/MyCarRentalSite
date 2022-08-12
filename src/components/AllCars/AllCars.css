@@ -1,0 +1,52 @@
+.myAllCarMain{
+  display: flex;
+  width: 75%;
+  margin: auto;
+  margin-top: 7vh;
+}
+.myAllCarMainLeft{
+  flex: 25%;
+  margin: 30px;
+}
+.myAllCarMainCenter{
+  flex: 25%;
+  margin: 20px;
+
+}
+.myAllCarMainRight{
+  flex: 25%;
+  margin: 30px;
+
+
+}
+.slider-container1 {
+  width: 60vw;
+  margin: auto;
+  margin-top: 7%;
+  height: 40%;
+}
+.slider-item-div {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  height: 40%;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  .myAllCarMain {
+    flex-direction: column;
+  }
+  .myAllCarMainLeft{
+    margin: 5px;
+  }
+  .myAllCarMainCenter{
+    margin: 5px;
+    margin-left: 8px;
+
+  }
+  .myAllCarMainRight{
+    margin: 5px;
+
+
+  }
+}

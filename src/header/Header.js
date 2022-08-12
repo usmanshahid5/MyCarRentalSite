@@ -102,17 +102,6 @@ const Header = ({ GetCityData, value }) => {
               to make a type
             </div>
           </div>
-          <Stack direction="row" spacing={ 2 }>
-            <Button variant="contained" className="contactButton" style={ {
-              margin: "auto",
-              backgroundColor: "#A48111",
-              marginTop: "30px",
-              width: "150px",
-              height: "48px"
-            } }>
-              <div>Explore</div>
-            </Button>
-          </Stack>
         </div>
         <div style={ { flex: "60%" } }>
           <div style={ { height: "70%", width: "80%" } } className="browse2"></div>

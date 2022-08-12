@@ -18,12 +18,12 @@ const Main = () => {
       <Route exact path="/" element={ <Header/> }/>
       <Route exact path="/carDescription/:id" element={ <CarFlow/> }/>
       <Route exact path="/SignIn" element={ <SignInSide/> }/>
-      <Route exact path="/main" element={ <Header/> }/>
+      {/*<Route exact path="/main" element={ <Header/> }/>*/}
       <Route exact path="/SignUp" element={ <SignUp/> }/>
       <Route exact path="/city/:city" element={ <MyCity/> }/>
       <Route exact path="/Feature/:type" element={ <MyFeature/> }/>
-      <Route exact path="/profile" element={ <Profile/> }/>
-      <Route exact path='/aboutus' element={ <AboutUs/> }/>
+      {/*<Route exact path="/profile" element={ <Profile/> }/>*/}
+      {/*<Route exact path='/aboutus' element={ <AboutUs/> }/>*/}
       <Route exact path='/allcars' element={ <AllCars/> }/>
           </Routes>
 

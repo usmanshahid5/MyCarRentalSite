@@ -35,7 +35,7 @@ export default function MyRatingPanel() {
   const theme = useTheme();
   return (
     <>
-      <h5>Ratings and Reviews </h5>
+      <h5 style={{fontFamily:"Inter"}}>Ratings and Reviews </h5>
       <Box
         sx={ {
           width: 200,
@@ -43,7 +43,7 @@ export default function MyRatingPanel() {
           alignItems: 'center',
         } }
       >
-        <h1>5.0</h1>
+        <h1 style={{fontFamily:"Inter"}}>5.0</h1>
         <Rating
           name="hover-feedback"
           value={ 5 }
@@ -54,11 +54,11 @@ export default function MyRatingPanel() {
       </Box>
       <h6 style={ { marginTop: "2%" } }>Reviews</h6>
 
-      <Card sx={ { display: 'flex', width: "40%", marginTop: "2%" } } className="Rating">
+      <Card sx={ { display: 'flex', width: 450, marginTop: "2%" } } className="Rating">
         <CardMedia
           component="img"
           sx={ {
-            width: "40%", height: 100
+            width: 300, height: 100
           } }
           image={ img1 }
           alt="Live from space album cover"
@@ -84,11 +84,11 @@ export default function MyRatingPanel() {
         </Box>
       </Card>
 
-      <Card sx={ { display: 'flex', width: "40%", marginTop: "3%" } } className="Rating">
+      <Card sx={ { display: 'flex', width: 450, marginTop: "3%" } } className="Rating">
         <CardMedia
           component="img"
           sx={ {
-            width: "18%", height: 100
+            width: 100, height: 100
           } }
           image={ img2 }
           alt="Live from space album cover"
@@ -114,11 +114,11 @@ export default function MyRatingPanel() {
         </Box>
       </Card>
 
-      <Card sx={ { display: 'flex', width: "40%", marginTop: "3%" } } className="Rating">
+      <Card sx={ { display: 'flex', width: 450, marginTop: "3%" } } className="Rating">
         <CardMedia
           component="img"
           sx={ {
-            width: 220, height: 100
+            width: 100, height: 100
           } }
           image={ img3 }
           alt="Live from space album cover"
