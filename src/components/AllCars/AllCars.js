@@ -57,14 +57,14 @@ const AllCars=()=> {
         </div>
 
 
-        <div style={{marginTop:"10vh", float:"right"}}>
-          <h2 style={{color:"#A48111", fontFamily:"Inter", fontSize:"60px"}}>Don’t dream it just hire it</h2>
-          <h1 style={{fontFamily:"Inter"}}>We make your drive nice and easy</h1>
-          <h5 style={{width:"50%", opacity:".7", fontFamily:"Inter"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </h5>
+        <div className="head7">
+          <h2 className="head4">Don’t dream it just hire it</h2>
+          <h1 className="head5">We make your drive nice and easy</h1>
+          <h5 className="head6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </h5>
         </div>
-        <hr style={{width:"60%", margin:"auto", marginTop:"5vh"}}/>
 
 {/*Make*/}
+        <div className="head8">
         <div className="myAllCarMain">
           <div className="myAllCarMainLeft">
         <Box  sx={{ width:"100%", margin:"10px"}}>
@@ -133,7 +133,7 @@ const AllCars=()=> {
         </Box>
         </div>
         </div>
-
+        </div>
 
         <Box className='boxh' data-aos="fade-up">
           <Grid container spacing={ { xs: 2, md: 3 } } columns={ { xs: 2, sm: 12, md: 12 } }>
@@ -213,7 +213,7 @@ const AllCars=()=> {
         <div style={{marginTop:"7vh"}}>
           <CitiesCatalog/>
         </div>
-        <div style={{marginTop:"3%"}}>
+        <div className="foot">
           <Footer/>
         </div>
       </div>

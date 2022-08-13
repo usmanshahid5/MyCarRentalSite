@@ -93,7 +93,7 @@ const CarDetails = (props) => {
 
           </div>
           <div className='right-r'>
-            <h2 style={ { width: "70%", marginTop: "15%" } } className="right-rr">$76<span
+            <h2 className="right-rr">$76<span
               style={ { fontSize: "15px" } }>/day</span></h2>
             <hr style={ { width: "90%", float: "left" } }/>
             <FormLabel id="demo-row-radio-buttons-group-label" style={ { marginTop: "5%" } }>Schedule your
@@ -102,7 +102,7 @@ const CarDetails = (props) => {
             <div style={ { marginTop: "3%" } }>
 
               <FormLabel id="demo-row-radio-buttons-group-label">Pickup and Return</FormLabel>
-              <div>
+              <div className="mapstyle">
                 <Maps/>
               </div>
               <FormControl style={ { marginTop: "3%" } }>

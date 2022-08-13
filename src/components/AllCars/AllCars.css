@@ -4,6 +4,11 @@
   margin: auto;
   margin-top: 7vh;
 }
+.head4{
+  color:#A48111;
+  font-family:Inter;
+  font-size:60px;
+}
 .myAllCarMainLeft{
   flex: 25%;
   margin: 30px;
@@ -32,12 +37,40 @@
   height: 40%;
   width: 100%;
 }
+.head7{
+  margin-top:10vh;
+  font-family:Inter;
+  float:right;
+}
+.foot{
+  margin-top:3%;
+}
+
 @media (max-width: 800px) {
+  .head7{
+    margin-top:10vh;
+    font-family:Inter;
+    float:right;
+    margin-left: 10%;
+  }
+  .head6{
+    width:80%;
+    opacity:.7;
+    font-family:Inter;
+    font-size: 18px;
+  }
+  .head5{
+    font-size: 32px;
+    width: 90%;
+  }
   .myAllCarMain {
     flex-direction: column;
   }
   .myAllCarMainLeft{
     margin: 5px;
+  }
+  .head8{
+    margin-top: 10%;
   }
   .myAllCarMainCenter{
     margin: 5px;
@@ -46,7 +79,14 @@
   }
   .myAllCarMainRight{
     margin: 5px;
-
-
+  }
+  .foot{
+    margin-top: 8%;
+  }
+  .head4{
+    color:#A48111;
+    font-family:Inter;
+    font-size:42px;
+    width: 80%;
   }
 }

@@ -34,7 +34,7 @@
 
 .right-rr {
   width: 70%;
-  margin-top: 15%;
+  margin-top: 20%;
 }
 
 .content1 {
@@ -70,6 +70,16 @@
   margin-left: 10%;
   margin-top: 4%;
   font-family: Inter;
+}
+
+@media (max-width: 375px){
+.right-r{
+  margin-left: 20px;
+  margin-top: 25vh;
+}
+  .mapstyle{
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -123,6 +133,9 @@
 
   .Catalog {
     margin-top: 8%;
+  }
+  .left-l{
+    margin-left: -20px;
   }
 
 }

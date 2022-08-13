@@ -2,7 +2,51 @@ body {
   padding: 0px;
   margin: 0px;
 }
-
+.head2{
+  font-size: 32px;
+  margin-left: 6%;
+  margin-top: 6%;
+  font-family: Inter;
+}
+.con{
+  font-size: 32px;
+  margin-left: 6%;
+  margin-top: 3%;
+  font-family:Inter;
+}
+.subsec{
+  font-size: 32px;
+  margin-left: 6%;
+  margin-top: 3%;
+  font-family:Inter;
+}
+.con1{
+  font-size: 18px;
+  font-family:Inter;
+  margin-left: 6%;
+  margin-top: 1%;
+  opacity: .7;
+  width: 70%;
+}
+.rightcon{
+  font-size: 18px;
+  font-family:Inter;
+  margin-top: 1%;
+  opacity:.7;
+  margin: auto;
+  width:80%;
+}
+.secondsubsec{
+  font-size: 18px;
+  font-family:Inter;
+  margin-left: 6%;
+  margin-top: 2%;
+  opacity: .8;
+  width: 80%;
+}
+.righthh{
+  font-size: 32px;
+}
 .header {
   height: 90vh;
   width: 100%;
@@ -14,6 +58,9 @@ body {
   margin: auto;
   position: relative;
 
+}
+.rightimgdesign{
+flex:35%;
 }
 .FeatureCatalog{
   margin-top: 30px;
@@ -91,15 +138,6 @@ body {
   border-radius:200px 60px 20px 100px;
 }
 
-/*.leftcontent21 {*/
-/*  margin-left: 7.58%;*/
-/*  margin-top: 8vh;*/
-/*  font-family: 'Inter';*/
-/*  font-style: normal;*/
-/*  font-weight: 600;*/
-/*  font-size: 50px;*/
-/*  color: black;*/
-/*}*/
 
 .leftcontent21 {
   margin-left: 7.58%;
@@ -110,6 +148,15 @@ body {
   font-size: 60px;
   color: black;
   width: 60%;
+}
+.con3{
+  font-size: 18px;
+  font-family:Inter;
+  margin-left: 6%;
+  margin-top: 1%;
+  opacity: .7;
+  margin: auto;
+  width:70%;
 }
 
 .smallpara {
@@ -153,6 +200,14 @@ body {
 }
 .catalog1{
   margin-top: 10vh;
+}
+.head3{
+  font-Size: 18px;
+  font-family:Inter;
+  margin-left:6%;
+  margin-top: 1%;
+  opacity: .7;
+  width: 70%;
 }
 
 .dateSetting {
@@ -227,6 +282,85 @@ body {
     margin-right: 7%;
     margin-Top: -2%;
   }
+}
+@media (max-width: 375px) {
 
-
+  .datePicker2 {
+    width: 300px;
+  }
+  .rightimgdesign{
+    display: none;
+  }
+  .leftcontent21{
+    font-size: 32px;
+    width: 85%;
+  }
+  .belowHeading{
+    margin-top: 12%;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 26px;
+  }
+  .subsec{
+    font-size: 26px;
+  }
+  .secondsubsec{
+    font-size: 16px;
+  }
+  .righthh{
+    font-size: 26px;
+  }
+  .rightcon{
+    float: left;
+    text-align: left;
+    width: 100%;
+  }
+  .con{
+    font-size: 26px;
+    margin-left: 6%;
+    margin-top: 3%;
+    font-family:Inter;
+  }
+  .con1{
+    font-size: 16px;
+    font-family:Inter;
+    margin-left: 6%;
+    margin-top: 1%;
+    opacity: .7;
+    width: 70%;
+  }
+  .catalog2{
+    margin-top: 50px;
+  }
+  .con2{
+    font-size: 26px;
+    font-family: Inter;
+    text-align: left;
+  }
+  .head3{
+    font-Size: 16px;
+    font-family:Inter;
+    margin-left:6%;
+    margin-top: 1%;
+    opacity: .7;
+    width: 70%;
+  }
+  .head2{
+    font-size: 26px;
+    margin-left: 6%;
+    margin-top: 6%;
+    font-family: Inter;
+  }
+  .con3{
+    font-size: 16px;
+    font-family:Inter;
+    /*margin-top: 1%;*/
+    opacity: .7;
+    width:90%;
+    float: left;
+    text-align: left;
+  }
+  .feature-cat{
+    margin-top: 7vh;
+  }
 }
