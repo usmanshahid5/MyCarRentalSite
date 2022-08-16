@@ -22,7 +22,7 @@ const Main = () => {
       <Route exact path="/SignUp" element={ <SignUp/> }/>
       <Route exact path="/city/:city" element={ <MyCity/> }/>
       <Route exact path="/Feature/:type" element={ <MyFeature/> }/>
-      {/*<Route exact path="/profile" element={ <Profile/> }/>*/}
+      <Route exact path="/profile" element={ <Profile/> }/>
       {/*<Route exact path='/aboutus' element={ <AboutUs/> }/>*/}
       <Route exact path='/allcars' element={ <AllCars/> }/>
           </Routes>
