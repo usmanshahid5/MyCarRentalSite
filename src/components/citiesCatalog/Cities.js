@@ -9,7 +9,7 @@ const cities = [
     image: img1,
     title: "City 1",
     description: "Lorem Ipsum is simply dummy text",
-    city: "CHICAGO"
+    city: "Chicago"
 
   },
   {
@@ -17,19 +17,27 @@ const cities = [
     image: img2,
     title: "City 2",
     description: "Lorem Ipsum is simply dummy text",
-    city: "NEWYORK"
+    city: "Newyork"
   }, {
     id: 3,
     image: img3,
     title: "City 3",
     description: "Lorem Ipsum is simply dummy text",
-    city: "BOSTON"
-  }, {
+    city: "Bostan"
+  },
+  {
     id: 4,
     image: img4,
     title: "City 4",
     description: "Lorem Ipsum is simply dummy text",
-    city: "PHOENIX"
+    city: "Phoenix"
+  },
+  {
+    id: 4,
+    image: img3,
+    title: "City 4",
+    description: "Lorem Ipsum is simply dummy text",
+    city: "Miami"
   }
 ]
 export default cities

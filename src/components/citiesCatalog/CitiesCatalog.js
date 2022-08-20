@@ -4,7 +4,7 @@ import Home                 from "../home/home";
 import cities               from "./Cities";
 import { NavLink }          from "react-router-dom";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick-theme-try.css";
 
 export default class CitiesCatalog extends Component {
   render() {
@@ -29,7 +29,7 @@ export default class CitiesCatalog extends Component {
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             initialSlide: 2
           }

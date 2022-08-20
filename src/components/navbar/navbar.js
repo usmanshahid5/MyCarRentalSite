@@ -42,8 +42,8 @@ const ResponsiveAppBar = () => {
 
   return (
 
-    <AppBar style={ { zIndex: "2", backgroundColor: "black", position: "fixed" } }>
-      <Container maxWidth="xl">
+    <AppBar style={ { zIndex: "2", backgroundColor: "white", position: "fixed", height:"60px" } }>
+      <Container maxWidth="xl" style={{marginTop:"-4px"}}>
         <Toolbar disableGutters>
           <div className='logoimg' sx={ { display: { xs: 'none', md: 'flex' }, mr: 1 } }/>
           <Typography
@@ -56,7 +56,7 @@ const ResponsiveAppBar = () => {
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Poppins',
               fontWeight: 500,
-              color: '#A48111',
+              color: 'black',
               textDecoration: 'none',
             } }
           >
@@ -70,7 +70,7 @@ const ResponsiveAppBar = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={ handleOpenNavMenu }
-              color="inherit"
+              sx={{color:"black"}}
             >
               <MenuIcon/>
             </IconButton>
@@ -100,7 +100,7 @@ const ResponsiveAppBar = () => {
                       to= '/aboutus'
                       style={{color:"black"}}
 
-                    >About us</NavLink></Typography>
+                    >about us</NavLink></Typography>
                 </MenuItem>
 
             </Menu>
@@ -128,18 +128,33 @@ const ResponsiveAppBar = () => {
 
               <Button
                 onClick={ handleCloseNavMenu }
-                sx={ { my: 2, color: 'white', display: 'block' } }
+                sx={ { my: 2, color: 'black', display: 'block' } }
               > <NavLink
                 to= '/aboutus'
-                style={{color:"white"}}
+                style={{color:"black"}}
               >
-                About us</NavLink>
+                about us</NavLink>
               </Button>
 
           </Box>
 
           <Box sx={ { flexGrow: 0 } }>
+            <Box>
+            <Menu>
+            <MenuItem onClick={ handleCloseNavMenu }>
+
+              <Typography textAlign="center" style={{color:"white"}}>
+                <NavLink
+                  to= '/aboutus'
+                  style={{color:"black"}}
+
+                >about us</NavLink></Typography>
+            </MenuItem>
+
+          </Menu>
+        </Box>
             <Tooltip title="Open settings">
+
               <IconButton onClick={ handleOpenUserMenu } sx={ { p: 0, borderColor:"#A48111" } }>
                 <Avatar alt="Remy Sharp" src={ img1 } />
               </IconButton>

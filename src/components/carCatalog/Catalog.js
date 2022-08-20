@@ -5,7 +5,7 @@ import Home                 from "../home/home";
 import { FontAwesomeIcon }  from "@fortawesome/react-fontawesome";
 import { NavLink, Link }    from "react-router-dom";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slicktheme2.css";
 import './Catalog.css';
 
 export default class Catalog extends Component {
@@ -17,7 +17,7 @@ export default class Catalog extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       initialSlide: 0,
-
+      space:20,
       responsive: [
         {
           breakpoint: 1024,
@@ -39,7 +39,7 @@ export default class Catalog extends Component {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1
           }
         }

@@ -88,6 +88,19 @@ const FeatureData = [
     description: "Pack your bags and let's go with us for a long trip",
     bold:"let's go"
 
+  },{
+    image1: img15,
+    image2: img14,
+    image3: img13,
+    image4: img16,
+    image5: img17,
+    image6: img18,
+
+    type:"Teravel",
+    Heading:"Why our cars service is best for travelling",
+    description: "Pack your bags and let's go with us for a long trip",
+    bold:"let's go"
+
   },
 ]
 export default FeatureData

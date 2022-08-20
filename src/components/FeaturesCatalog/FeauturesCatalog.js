@@ -30,7 +30,7 @@ export default class FeauturesCatalog extends Component {
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             initialSlide: 2
           }

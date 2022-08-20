@@ -10,18 +10,23 @@ const Home=(props)=> {
   return (
     <>
     
-    <Card sx={{  width: 3/4, height:230, boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
+    <Card sx={{  width: "160px", height:"210px", borderRadius:"15px"
+    ,boxShadow: "rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"}}>
       <CardActionArea>
         <CardMedia
           component="img"
           image={props.image}
           alt="Car Picture"
-          height="160"
-          style={{paddingTop:"20px",borderRadius:"100%", padding:"10px", width:"80%",
-            boxShadow: "rgb(218,165,32, .8) 2px 5px 5px 2px"}}
+          sx={{borderRadius:"100%", bgcolor: 'background.paper',
+            borderColor: 'text.primary',
+            m: 1,
+            border: 1,
+            width: '8rem',
+            height: '8rem',
+          marginTop:"10px"}}
         />
         <CardContent>
-          <Typography gutterBottom variant="h8" component="div" className='label' style={{fontWeight:"600", textAlign:"center"}}>
+          <Typography gutterBottom variant="h8" component="div" className='label' style={{fontSize:"18px",fontWeight:"600", textAlign:"center"}}>
             {props.title}
           </Typography>
         </CardContent>
