@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MyCarRentalSite/static/css/main.b28256d6.css",
-    "main.js": "/MyCarRentalSite/static/js/main.50628e26.js",
+    "main.css": "/MyCarRentalSite/static/css/main.dbf77820.css",
+    "main.js": "/MyCarRentalSite/static/js/main.24a21df7.js",
     "static/media/14.jpg": "/MyCarRentalSite/static/media/14.dc740458eaf181344c1c.jpg",
     "static/media/20.jpg": "/MyCarRentalSite/static/media/20.00f22002421a46070fa6.jpg",
     "static/media/5.jpg": "/MyCarRentalSite/static/media/5.3ae96547fa07c4935a60.jpg",
@@ -10,6 +10,7 @@
     "static/media/1.jpg": "/MyCarRentalSite/static/media/1.098a0eda84069f23c2c6.jpg",
     "static/media/11.jpg": "/MyCarRentalSite/static/media/11.0eb799507aaa5ecdd9e4.jpg",
     "static/media/4.jpg": "/MyCarRentalSite/static/media/4.872529423b9607bf9086.jpg",
+    "static/media/rec1.png": "/MyCarRentalSite/static/media/rec1.49263c21599e759c7d37.png",
     "static/media/10.jpg": "/MyCarRentalSite/static/media/10.a15a7c3f945281140f36.jpg",
     "static/media/2.jpg": "/MyCarRentalSite/static/media/2.2988fac5d90ce8d1094a.jpg",
     "static/media/7.jpg": "/MyCarRentalSite/static/media/7.6e60b8bd83a9867e17d3.jpg",
@@ -33,11 +34,11 @@
     "static/media/slick.eot": "/MyCarRentalSite/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/MyCarRentalSite/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/MyCarRentalSite/static/media/slick.295183786cd8a1389865.woff",
-    "main.b28256d6.css.map": "/MyCarRentalSite/static/css/main.b28256d6.css.map",
-    "main.50628e26.js.map": "/MyCarRentalSite/static/js/main.50628e26.js.map"
+    "main.dbf77820.css.map": "/MyCarRentalSite/static/css/main.dbf77820.css.map",
+    "main.24a21df7.js.map": "/MyCarRentalSite/static/js/main.24a21df7.js.map"
   },
   "entrypoints": [
-    "static/css/main.b28256d6.css",
-    "static/js/main.50628e26.js"
+    "static/css/main.dbf77820.css",
+    "static/js/main.24a21df7.js"
   ]
 }
