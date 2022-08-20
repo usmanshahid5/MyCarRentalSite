@@ -3,7 +3,7 @@ import Slider               from "react-slick";
 import Home                 from "../components/home/home";
 import feedbackdata         from "./feedbackdata";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slicktheme2.css";
 import '../components/carCatalog/Catalog.css'
 
 

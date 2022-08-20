@@ -37,9 +37,9 @@ export default class Catalog extends Component {
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 480,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1
           }
         }

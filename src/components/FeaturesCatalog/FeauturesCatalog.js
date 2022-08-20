@@ -4,7 +4,7 @@ import Feature     from '../Features/Feature';
 import FeatureData from './FeatureData';
 import { NavLink } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slicktheme2.css";
 import Home from "../home/home"
 
 export default class FeauturesCatalog extends Component {
